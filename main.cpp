@@ -14,7 +14,6 @@ void main() {
 	srand(time(0));
 	const char DIGITS[] = "0123456789,."; 
 	const double EPS = 0.00000001;
-	//char params_string[500];
 	char * params_string = getenv("QUERY_STRING");
 	bool invalid_input = false;
 	unsigned short int number_of_p = 0, op_index = 0, p_index = 0, num_of_comas = 0, num_of_dots = 0;
@@ -24,7 +23,6 @@ void main() {
 	printf("<title>Parallelograms</title>\n");
 	printf("</head>\n");
 	printf("<body>\n");
-	//cin.getline(params_string, 500);
 	for (int i = 0; i < strlen(params_string); i++)
 		if (params_string[i] == ',')
 			num_of_comas++;
@@ -117,7 +115,6 @@ void main() {
 	if (invalid_input)
 		printf("<h1>ОШИБКА!!</h1><p>Один, или несколько параметров были введены неверно.</p>");
 	printf("</body> </html>\n");
-	system("pause");
 }
 
 bool is_all_ch_allowable(char * str, const char * allowable_ch) {
